@@ -2,5 +2,15 @@
   "extends": "./tsconfig.base.json",
   "compileOnSave": false,
   "files": [],
-  "references": []
+  "references": [
+    {
+      "path": "./apps/experiment"
+    },
+    {
+      "path": "./apps/express-api-e2e"
+    },
+    {
+      "path": "./apps/express-api"
+    }
+  ]
 }
