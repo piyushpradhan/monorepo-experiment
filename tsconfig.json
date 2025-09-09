@@ -7,10 +7,7 @@
       "path": "./apps/experiment"
     },
     {
-      "path": "./apps/express-api-e2e"
-    },
-    {
-      "path": "./apps/express-api"
+      "path": "./apps/experiment-backend"
     }
   ]
 }

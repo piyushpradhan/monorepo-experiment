@@ -1,0 +1,38 @@
+# Dependencies
+node_modules
+
+# Build outputs
+dist
+build
+
+# Environment files
+.env*
+
+# IDE files
+.vscode
+.idea
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Git
+.git
+
+# Test files
+coverage
+*.test.js
+*.spec.js
+__tests__
+
+# Logs
+*.log
+
+# Cache
+.cache
+.parcel-cache
+.eslintcache
+
+# Temporary folders
+tmp/
+temp/
