@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  proxy:
+    image: nginx:alpine
+    container_name: proxy
+    ports:
+      - '8090:80'
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on:
+      - experiment
+      - experiment-backend
+      - golang-backend
+    restart: unless-stopped
+
+  experiment:
+    build:
+      context: ./apps/experiment
+      dockerfile: Dockerfile
+    container_name: experiment
+    expose:
+      - '5173'
+    depends_on:
+      - experiment-backend
+      - golang-backend
+
+  experiment-backend:
+    build:
+      context: ./apps/experiment-backend
+      dockerfile: Dockerfile
+    container_name: experiment-backend
+    expose:
+      - '3000'
+
+  golang-backend:
+    build:
+      context: ./apps/golang-backend
+      dockerfile: Dockerfile
+    container_name: golang-backend
+    expose:
+      - '8000'
