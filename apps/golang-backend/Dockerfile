@@ -13,7 +13,6 @@ RUN ls
 FROM alpine:latest
 WORKDIR /app
 COPY --from=builder /app/main ./main
-RUN ls
 EXPOSE 8000
 
 CMD ["./main"]

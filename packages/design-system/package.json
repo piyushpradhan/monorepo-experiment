@@ -1,0 +1,52 @@
+{
+  "name": "@monorepo/design-system",
+  "version": "1.0.0",
+  "description": "A comprehensive design system with blue color tokens and utilities",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./colors": {
+      "import": "./dist/colors.js",
+      "require": "./dist/colors.js",
+      "types": "./dist/colors.d.ts"
+    },
+    "./css": "./dist/colors.css",
+    "./scss": "./dist/colors.scss"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc && node build.js",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist",
+    "prebuild": "npm run clean",
+    "test": "jest",
+    "lint": "eslint src --ext .ts,.tsx"
+  },
+  "keywords": [
+    "design-system",
+    "colors",
+    "tokens",
+    "css",
+    "scss",
+    "typescript"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "eslint": "^8.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0"
+  }
+}

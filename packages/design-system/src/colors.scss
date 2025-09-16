@@ -1,0 +1,196 @@
+/* Monorepo Design System - Color Tokens */
+/* Generated SCSS Variables and Mixins */
+
+// Primary Colors
+$alice-blue: #edf2fb;
+$lavender-web: #e2eafc;
+$lavender-web-2: #d7e3fc;
+$periwinkle: #ccdbfd;
+$periwinkle-2: #c1d3fe;
+$periwinkle-3: #b6ccfe;
+$jordy-blue: #abc4ff;
+
+// Primary Color Scale
+$primary-50: $alice-blue;
+$primary-100: $lavender-web;
+$primary-200: $lavender-web-2;
+$primary-300: $periwinkle;
+$primary-400: $periwinkle-2;
+$primary-500: $periwinkle-3;
+$primary-600: $jordy-blue;
+
+// Semantic Colors
+$background-primary: $alice-blue;
+$background-secondary: $lavender-web;
+$background-tertiary: $lavender-web-2;
+$border-light: $periwinkle;
+$border-medium: $periwinkle-2;
+$border-strong: $periwinkle-3;
+$accent-primary: $jordy-blue;
+
+// Interactive States
+$hover-light: $lavender-web;
+$hover-medium: $periwinkle;
+$hover-strong: $periwinkle-2;
+$active-light: $periwinkle-2;
+$active-medium: $periwinkle-3;
+$active-strong: $jordy-blue;
+$focus-ring: $jordy-blue;
+
+// HSL Values
+$alice-blue-hsl: 219, 64%, 96%;
+$lavender-web-hsl: 222, 81%, 94%;
+$lavender-web-2-hsl: 221, 86%, 92%;
+$periwinkle-hsl: 222, 92%, 90%;
+$periwinkle-2-hsl: 222, 97%, 88%;
+$periwinkle-3-hsl: 222, 97%, 85%;
+$jordy-blue-hsl: 222, 100%, 84%;
+
+// RGB Values
+$alice-blue-rgb: 237, 242, 251;
+$lavender-web-rgb: 226, 234, 252;
+$lavender-web-2-rgb: 215, 227, 252;
+$periwinkle-rgb: 204, 219, 253;
+$periwinkle-2-rgb: 193, 211, 254;
+$periwinkle-3-rgb: 182, 204, 254;
+$jordy-blue-rgb: 171, 196, 255;
+
+// Color Maps
+$colors: (
+  'alice-blue': $alice-blue,
+  'lavender-web': $lavender-web,
+  'lavender-web-2': $lavender-web-2,
+  'periwinkle': $periwinkle,
+  'periwinkle-2': $periwinkle-2,
+  'periwinkle-3': $periwinkle-3,
+  'jordy-blue': $jordy-blue
+);
+
+$primary-colors: (
+  '50': $primary-50,
+  '100': $primary-100,
+  '200': $primary-200,
+  '300': $primary-300,
+  '400': $primary-400,
+  '500': $primary-500,
+  '600': $primary-600
+);
+
+$semantic-colors: (
+  'background-primary': $background-primary,
+  'background-secondary': $background-secondary,
+  'background-tertiary': $background-tertiary,
+  'border-light': $border-light,
+  'border-medium': $border-medium,
+  'border-strong': $border-strong,
+  'accent-primary': $accent-primary
+);
+
+// Mixins
+@mixin color-utilities($color-name, $color-value) {
+  .bg-#{$color-name} { background-color: $color-value; }
+  .text-#{$color-name} { color: $color-value; }
+  .border-#{$color-name} { border-color: $color-value; }
+}
+
+@mixin generate-color-utilities {
+  @each $name, $value in $colors {
+    @include color-utilities($name, $value);
+  }
+}
+
+@mixin generate-primary-utilities {
+  @each $scale, $value in $primary-colors {
+    .bg-primary-#{$scale} { background-color: $value; }
+    .text-primary-#{$scale} { color: $value; }
+    .border-primary-#{$scale} { border-color: $value; }
+  }
+}
+
+@mixin generate-semantic-utilities {
+  @each $name, $value in $semantic-colors {
+    .bg-#{$name} { background-color: $value; }
+    .text-#{$name} { color: $value; }
+    .border-#{$name} { border-color: $value; }
+  }
+}
+
+// Gradient Mixins
+@mixin linear-gradient($direction, $color-stops...) {
+  background: linear-gradient($direction, $color-stops);
+}
+
+@mixin radial-gradient($shape: circle, $size: closest-side, $color-stops...) {
+  background: radial-gradient($shape $size, $color-stops);
+}
+
+@mixin conic-gradient($from: 0deg, $color-stops...) {
+  background: conic-gradient(from $from, $color-stops);
+}
+
+// Predefined Gradients
+@mixin gradient-top {
+  @include linear-gradient(0deg, $alice-blue, $lavender-web, $lavender-web-2, $periwinkle, $periwinkle-2, $periwinkle-3, $jordy-blue);
+}
+
+@mixin gradient-right {
+  @include linear-gradient(90deg, $alice-blue, $lavender-web, $lavender-web-2, $periwinkle, $periwinkle-2, $periwinkle-3, $jordy-blue);
+}
+
+@mixin gradient-bottom {
+  @include linear-gradient(180deg, $alice-blue, $lavender-web, $lavender-web-2, $periwinkle, $periwinkle-2, $periwinkle-3, $jordy-blue);
+}
+
+@mixin gradient-left {
+  @include linear-gradient(270deg, $alice-blue, $lavender-web, $lavender-web-2, $periwinkle, $periwinkle-2, $periwinkle-3, $jordy-blue);
+}
+
+@mixin gradient-top-right {
+  @include linear-gradient(45deg, $alice-blue, $lavender-web, $lavender-web-2, $periwinkle, $periwinkle-2, $periwinkle-3, $jordy-blue);
+}
+
+@mixin gradient-bottom-right {
+  @include linear-gradient(135deg, $alice-blue, $lavender-web, $lavender-web-2, $periwinkle, $periwinkle-2, $periwinkle-3, $jordy-blue);
+}
+
+@mixin gradient-top-left {
+  @include linear-gradient(225deg, $alice-blue, $lavender-web, $lavender-web-2, $periwinkle, $periwinkle-2, $periwinkle-3, $jordy-blue);
+}
+
+@mixin gradient-bottom-left {
+  @include linear-gradient(315deg, $alice-blue, $lavender-web, $lavender-web-2, $periwinkle, $periwinkle-2, $periwinkle-3, $jordy-blue);
+}
+
+@mixin gradient-radial {
+  @include radial-gradient(circle, closest-side, $alice-blue, $lavender-web, $lavender-web-2, $periwinkle, $periwinkle-2, $periwinkle-3, $jordy-blue);
+}
+
+// Function to get color from map
+@function get-color($color-name) {
+  @if map-has-key($colors, $color-name) {
+    @return map-get($colors, $color-name);
+  }
+  @warn "Color '#{$color-name}' not found in $colors map.";
+  @return null;
+}
+
+@function get-primary-color($scale) {
+  @if map-has-key($primary-colors, $scale) {
+    @return map-get($primary-colors, $scale);
+  }
+  @warn "Primary color scale '#{$scale}' not found in $primary-colors map.";
+  @return null;
+}
+
+@function get-semantic-color($name) {
+  @if map-has-key($semantic-colors, $name) {
+    @return map-get($semantic-colors, $name);
+  }
+  @warn "Semantic color '#{$name}' not found in $semantic-colors map.";
+  @return null;
+}
+
+// Generate all utility classes
+@include generate-color-utilities;
+@include generate-primary-utilities;
+@include generate-semantic-utilities;

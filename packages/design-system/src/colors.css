@@ -1,0 +1,133 @@
+/* Monorepo Design System - Color Tokens */
+/* Generated CSS Custom Properties */
+
+:root {
+  /* Primary Colors */
+  --alice-blue: #edf2fb;
+  --lavender-web: #e2eafc;
+  --lavender-web-2: #d7e3fc;
+  --periwinkle: #ccdbfd;
+  --periwinkle-2: #c1d3fe;
+  --periwinkle-3: #b6ccfe;
+  --jordy-blue: #abc4ff;
+
+  /* Primary Color Scale */
+  --primary-50: var(--alice-blue);
+  --primary-100: var(--lavender-web);
+  --primary-200: var(--lavender-web-2);
+  --primary-300: var(--periwinkle);
+  --primary-400: var(--periwinkle-2);
+  --primary-500: var(--periwinkle-3);
+  --primary-600: var(--jordy-blue);
+
+  /* Semantic Colors */
+  --background-primary: var(--alice-blue);
+  --background-secondary: var(--lavender-web);
+  --background-tertiary: var(--lavender-web-2);
+  --border-light: var(--periwinkle);
+  --border-medium: var(--periwinkle-2);
+  --border-strong: var(--periwinkle-3);
+  --accent-primary: var(--jordy-blue);
+
+  /* Interactive States */
+  --hover-light: var(--lavender-web);
+  --hover-medium: var(--periwinkle);
+  --hover-strong: var(--periwinkle-2);
+  --active-light: var(--periwinkle-2);
+  --active-medium: var(--periwinkle-3);
+  --active-strong: var(--jordy-blue);
+  --focus-ring: var(--jordy-blue);
+
+  /* HSL Values */
+  --alice-blue-hsl: 219, 64%, 96%;
+  --lavender-web-hsl: 222, 81%, 94%;
+  --lavender-web-2-hsl: 221, 86%, 92%;
+  --periwinkle-hsl: 222, 92%, 90%;
+  --periwinkle-2-hsl: 222, 97%, 88%;
+  --periwinkle-3-hsl: 222, 97%, 85%;
+  --jordy-blue-hsl: 222, 100%, 84%;
+
+  /* RGB Values */
+  --alice-blue-rgb: 237, 242, 251;
+  --lavender-web-rgb: 226, 234, 252;
+  --lavender-web-2-rgb: 215, 227, 252;
+  --periwinkle-rgb: 204, 219, 253;
+  --periwinkle-2-rgb: 193, 211, 254;
+  --periwinkle-3-rgb: 182, 204, 254;
+  --jordy-blue-rgb: 171, 196, 255;
+}
+
+/* Utility Classes */
+.bg-alice-blue { background-color: var(--alice-blue); }
+.bg-lavender-web { background-color: var(--lavender-web); }
+.bg-lavender-web-2 { background-color: var(--lavender-web-2); }
+.bg-periwinkle { background-color: var(--periwinkle); }
+.bg-periwinkle-2 { background-color: var(--periwinkle-2); }
+.bg-periwinkle-3 { background-color: var(--periwinkle-3); }
+.bg-jordy-blue { background-color: var(--jordy-blue); }
+
+.text-alice-blue { color: var(--alice-blue); }
+.text-lavender-web { color: var(--lavender-web); }
+.text-lavender-web-2 { color: var(--lavender-web-2); }
+.text-periwinkle { color: var(--periwinkle); }
+.text-periwinkle-2 { color: var(--periwinkle-2); }
+.text-periwinkle-3 { color: var(--periwinkle-3); }
+.text-jordy-blue { color: var(--jordy-blue); }
+
+.border-alice-blue { border-color: var(--alice-blue); }
+.border-lavender-web { border-color: var(--lavender-web); }
+.border-lavender-web-2 { border-color: var(--lavender-web-2); }
+.border-periwinkle { border-color: var(--periwinkle); }
+.border-periwinkle-2 { border-color: var(--periwinkle-2); }
+.border-periwinkle-3 { border-color: var(--periwinkle-3); }
+.border-jordy-blue { border-color: var(--jordy-blue); }
+
+/* Primary Color Scale Utilities */
+.bg-primary-50 { background-color: var(--primary-50); }
+.bg-primary-100 { background-color: var(--primary-100); }
+.bg-primary-200 { background-color: var(--primary-200); }
+.bg-primary-300 { background-color: var(--primary-300); }
+.bg-primary-400 { background-color: var(--primary-400); }
+.bg-primary-500 { background-color: var(--primary-500); }
+.bg-primary-600 { background-color: var(--primary-600); }
+
+.text-primary-50 { color: var(--primary-50); }
+.text-primary-100 { color: var(--primary-100); }
+.text-primary-200 { color: var(--primary-200); }
+.text-primary-300 { color: var(--primary-300); }
+.text-primary-400 { color: var(--primary-400); }
+.text-primary-500 { color: var(--primary-500); }
+.text-primary-600 { color: var(--primary-600); }
+
+.border-primary-50 { border-color: var(--primary-50); }
+.border-primary-100 { border-color: var(--primary-100); }
+.border-primary-200 { border-color: var(--primary-200); }
+.border-primary-300 { border-color: var(--primary-300); }
+.border-primary-400 { border-color: var(--primary-400); }
+.border-primary-500 { border-color: var(--primary-500); }
+.border-primary-600 { border-color: var(--primary-600); }
+
+/* Semantic Color Utilities */
+.bg-background-primary { background-color: var(--background-primary); }
+.bg-background-secondary { background-color: var(--background-secondary); }
+.bg-background-tertiary { background-color: var(--background-tertiary); }
+.bg-border-light { background-color: var(--border-light); }
+.bg-border-medium { background-color: var(--border-medium); }
+.bg-border-strong { background-color: var(--border-strong); }
+.bg-accent-primary { background-color: var(--accent-primary); }
+
+.text-background-primary { color: var(--background-primary); }
+.text-background-secondary { color: var(--background-secondary); }
+.text-background-tertiary { color: var(--background-tertiary); }
+.text-border-light { color: var(--border-light); }
+.text-border-medium { color: var(--border-medium); }
+.text-border-strong { color: var(--border-strong); }
+.text-accent-primary { color: var(--accent-primary); }
+
+.border-background-primary { border-color: var(--background-primary); }
+.border-background-secondary { border-color: var(--background-secondary); }
+.border-background-tertiary { border-color: var(--background-tertiary); }
+.border-border-light { border-color: var(--border-light); }
+.border-border-medium { border-color: var(--border-medium); }
+.border-border-strong { border-color: var(--border-strong); }
+.border-accent-primary { border-color: var(--accent-primary); }
